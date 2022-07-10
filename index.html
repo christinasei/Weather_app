@@ -23,6 +23,8 @@
       src="https://kit.fontawesome.com/d53f32e17c.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
 
   <body>
@@ -46,23 +48,26 @@
           <div class="row">
             <div class="col-6">
               <br />
-              <div class="city" id="City">City</div>
+              <div class="city" id="city"></div>
               <div class="date">Date</div>
-              <div class="currentConditions">Current Conditions</div>
+              <div class="currentConditions" id="description">
+                Current Conditions
+              </div>
               <br />
               <div class="weatherIconNTemp">
                 <span class="mainIcon"
                   ><i class="fa-solid fa-cloud-sun-rain main"></i
                 ></span>
-                --C°
+                <span><span id="temperature"></span> °C</span>
               </div>
             </div>
             <div class="col-6">
               <br />
               <br />
-              <div class="precipitation">Precipitation: -- %</div>
-              <div class="humidity">Humidity: --%</div>
-              <div class="wind">Wind: --km/h</div>
+              <div>
+                Humidtiy: <span class="humidity" id="humidity"></span> %
+              </div>
+              <div>Wind: <span class="wind" id="wind"></span> km/h</div>
             </div>
           </div>
           <br />
@@ -116,7 +121,23 @@
       </div>
     </div>
     <script>
-      src = "app.js";
+      function displayTemperature(response) {
+        console.log(response.data.wind.speed);
+        let cityElement = document.querySelector("#city");
+        cityElement.innerHTML = response.data.name;
+        let temperatureElement = document.querySelector("#temperature");
+        temperatureElement.innerHTML = Math.round(response.data.main.temp);
+        console.log(response.data.main.temp);
+        let descriptionElement = document.querySelector("#description");
+        descriptionElement.innerHTML = response.data.weather[0].description;
+        let humidityElement = document.querySelector("#humidity");
+        humidityElement.innerHTML = response.data.main.humidity;
+        let windElement = document.querySelector("#wind");
+        windElement.innerHTML = Math.round(response.data.wind.speed);
+      }
+      let apiKey = "477f09ca1a2fb1bfcfeb8e5a31f57826";
+      let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=Vienna&appid=${apiKey}&units=metric`;
+      axios.get(apiURL).then(displayTemperature);
     </script>
   </body>
 </html>

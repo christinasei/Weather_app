@@ -1,9 +1,10 @@
 .all {
-  width: 850px;
+  max-width: 850px;
   display: block;
   margin: 0 auto;
-  margin-top: 40px;
+  margin-top: 30px;
 }
+
 .form-control-lg {
   margin-top: 20px;
 }
@@ -20,6 +21,7 @@
 }
 .currentConditions {
   margin-left: 30px;
+  text-transform: capitalize;
 }
 
 .weatherIconNTemp {
