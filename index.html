@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -19,15 +19,102 @@
         "sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2";
       crossorigin = "anonymous";
     </script>
+    <script
+      src="https://kit.fontawesome.com/d53f32e17c.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
+
   <body>
     <div class="container">
-      <h1>Weather App</h1>
-      <div class="searchButton">
-        <button type="button" class="btn btn-primary">Search</button>
+      <div class="card all" id="all">
+        <div class="card-body">
+          <form>
+            <div class="row">
+              <div class="col-9">
+                <input
+                  class="form-control form-control-lg"
+                  type="text"
+                  placeholder="Search City"
+                />
+              </div>
+              <div class="col-3">
+                <button type="submit" class="btn btn-primary">Search</button>
+              </div>
+            </div>
+          </form>
+          <div class="row">
+            <div class="col-6">
+              <br />
+              <div class="city" id="City">City</div>
+              <div class="date">Date</div>
+              <div class="currentConditions">Current Conditions</div>
+              <br />
+              <div class="weatherIconNTemp">
+                <span class="mainIcon"
+                  ><i class="fa-solid fa-cloud-sun-rain main"></i
+                ></span>
+                --C°
+              </div>
+            </div>
+            <div class="col-6">
+              <br />
+              <br />
+              <div class="precipitation">Precipitation: -- %</div>
+              <div class="humidity">Humidity: --%</div>
+              <div class="wind">Wind: --km/h</div>
+            </div>
+          </div>
+          <br />
+          <div class="row forecast">
+            <div class="col-3">
+              <div class="card">
+                <div class="card-body">
+                  <div class="Monday">Sunday</div>
+                  <br />
+                  <div class="weekdayIcon">
+                    <i class="fa-solid fa-cloud-showers-heavy"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="card">
+                <div class="card-body">
+                  <div class="Monday">Monday</div>
+                  <br />
+                  <div class="weekdayIcon">
+                    <i class="fa-solid fa-cloud-bolt"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="card">
+                <div class="card-body">
+                  <div class="Monday">Tuesday</div>
+                  <br />
+                  <div class="weekdayIcon">
+                    <i class="fa-solid fa-cloud-sun"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="card">
+                <div class="card-body">
+                  <div class="Monday">Wednesday</div>
+                  <br />
+                  <div class="weekdayIcon">
+                    <i class="fa-solid fa-sun"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-
     <script>
       src = "app.js";
     </script>

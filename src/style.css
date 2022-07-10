@@ -1,3 +1,46 @@
-h1 {
+.all {
+  width: 850px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+.form-control-lg {
+  margin-top: 20px;
+}
+.btn {
+  margin-left: 20px;
+  margin-top: 23px;
+}
+.city {
+  font-size: 30px;
+  margin-left: 30px;
+}
+.date {
+  margin-left: 30px;
+}
+.currentConditions {
+  margin-left: 30px;
+}
+
+.weatherIconNTemp {
+  margin-left: 30px;
+  font-size: 40px;
+}
+
+.mainIcon {
+  font-size: 50px;
+}
+.form-control {
+  margin-left: 20px;
+}
+.forecast {
+  margin-left: 50px;
+}
+.Monday {
+  font-size: 20px;
   text-align: center;
+}
+.weekdayIcon {
+  text-align: center;
+  font-size: 25px;
 }
