@@ -34,6 +34,19 @@
 }
 .units {
   font-size: 20px;
+  text-decoration: none;
+}
+
+.weatherIconNTemp .fahrenheit {
+  text-decoration: none;
+}
+.weatherIconNTemp .active {
+  color: black;
+  text-decoration: none;
+  cursor: default;
+}
+.weatherIconNTemp .active:hover {
+  cursor: default;
 }
 .form-control {
   margin-left: 20px;
