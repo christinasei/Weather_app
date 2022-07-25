@@ -1,4 +1,4 @@
-function formatDate(timpestamp) {
+function formatDate(timestamp) {
   let date = new Date(timestamp);
   let hours = date.getHours();
   if (hours < 10) {
@@ -8,7 +8,6 @@ function formatDate(timpestamp) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-  let day = days[date.getDay()];
   let days = [
     "Sunday",
     "Monday",
@@ -19,8 +18,11 @@ function formatDate(timpestamp) {
     "Saturday",
   ];
 
+  let day = days[date.getDay()];
+
   return `${day} ${hours}:${minutes}`;
 }
+
 function displayTemperature(response) {
   console.log(response.data.wind.speed);
   let cityElement = document.querySelector("#city");
