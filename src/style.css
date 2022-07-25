@@ -29,8 +29,11 @@
   font-size: 40px;
 }
 
-.mainIcon {
+.float-left {
   font-size: 50px;
+}
+.units {
+  font-size: 20px;
 }
 .form-control {
   margin-left: 20px;
